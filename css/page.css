@@ -1,0 +1,233 @@
+body{
+    height: 100%;
+    /* overflow: hidden; */
+}
+/* body section{
+    height: 100vh;
+} */
+section{
+    height: 1080px;
+}
+
+#main div h2,
+#campaign h2,
+#story h2,
+#collection h2{
+    font-family: 'Poppins';
+}
+
+#main div:first-of-type span,
+#about div,
+#campaign ul li p,
+#collection ul li div{
+    font-family: 'Nanum Gothic';
+}
+
+@media screen and (min-width: 1280px){
+    #main{
+        background: url('../images/main_bg.png') no-repeat left top;
+        background-size: 50% 100%;
+        background-color: #031027;
+    }
+    #main div:first-of-type{
+        margin-left: 50%; padding-top: 400px;
+    }
+    #main div h2{
+        color: #fff;
+        font-size: 50px; width: 67.32%;
+        margin: 0 auto 80px; text-align: center;
+        font-weight: 300; line-height: 80px;
+    }
+    #main div span{
+        display: block;
+    }
+    #main div:first-of-type span{
+        color: #fff; font-size: 30px;
+        margin: 0 auto; width: 30.53%;
+    }
+    #main div:last-of-type{
+        width: 3.16%; margin-left: 48%; color: #fff;
+        padding-top: 10%;
+    }
+    #main div:last-of-type span:first-of-type{
+        border: 1px solid #fff; 
+        transform: rotate(90deg);
+        border-radius: 25px; padding: 25% 40px; box-sizing: border-box;
+        font-size: 20px; text-indent: -9999px;
+    }
+    #main div:last-of-type span:first-of-type::after{
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-left: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        box-sizing: border-box;
+        animation-duration: 1s;
+        animation-name: arrowDown;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+    @keyframes arrowDown{
+        from{
+            transform: translateX(0) rotate(-135deg);
+        }to{
+            transform: translateX(100%) rotate(-135deg);
+        }
+    }
+    #main div:last-of-type span:last-of-type{
+        text-align: center; font-size: 15px;
+        padding: 30px 0 15px 25%;
+    }
+    /* main section Fin */
+
+    #about{
+        background: url('../images/about_bg.png') no-repeat left top;
+        background-size: 100%;
+    }
+    #about h2{
+        display: none;
+    }
+    #about div{
+        font-size: 18px; color: #031027;
+        padding-top: 265px; margin-left: 50%;
+        width: 37.37%; line-height: 40px;
+    }
+    /* about section Fin */
+
+    #campaign{
+        background-color: #ddb9a2;
+        overflow: hidden;
+    }
+    #campaign::after{
+        content: ''; display: block; visibility: hidden; clear: both;
+    }
+    #campaign h2{
+        padding-top: 370px; margin-left: 13.16%;
+        font-weight: 700; font-size: 70px; width: 21.05%;
+        line-height: 75px; color: #031027;
+        float: left;
+    }
+    #campaign h2 span{
+        display: block;
+    }
+    #campaign div ul{
+        padding-top: 200px; margin-left: 3.16%;
+        width: 60.53%; margin-bottom: 40px;
+    }
+    #campaign div ul li{
+        display: inline-block;
+    }
+    #campaign div ul li{
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+    #campaign div ul li p{
+        font-size: 14px; line-height: 20px; color: #031027;
+    }
+    #campaign div ul li:first-of-type{
+        background-image: url('../images/cam_01.png');
+        padding-top: 545px;
+    }
+    #campaign ul li:first-of-type p{
+        width: 77%;
+    }
+    #campaign div ul li:nth-of-type(2){
+        background-image: url('../images/cam_02.png');
+        padding-top: 445px;
+    }
+    #campaign div ul li:nth-of-type(3){
+        background-image: url('../images/cam_03.png');
+        padding-top: 545px;
+    }
+    #campaign div ul li:nth-of-type(3) p{
+        width: 86%;
+    }
+    #campaign div ul li:nth-of-type(4){
+        background-image: url('../images/cam_04.png');
+        padding-top: 445px;
+    }
+    #campaign div ul li:last-of-type{
+        background-image: url('../images/cam_05.png');
+        padding-top: 570px;
+    }
+    /* campaign section Fin */
+
+    #story{
+        background-color: #1b3748;
+    }
+    #story h2{
+        padding-top: 290px; font-size: 40px; color: #fff;
+        font-weight: 400; width: 34%; margin: 0 auto;
+    }
+    #story ul{
+        padding-top: 100px; width: 74%; margin: 0 auto;
+    }
+    #story ul::after{
+        content: ''; display: block; visibility: hidden; clear: both;
+    }
+    #story ul li{
+        float: left; width: 25%;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+    #story ul li:first-of-type{
+        background-image: url('../images/insta01.png');
+    }
+    #story ul li:nth-of-type(2){
+        background-image: url('../images/insta02.png');
+    }
+    #story ul li:nth-of-type(3){
+        background-image: url('../images/insta03.png');
+    }
+    #story ul li:last-of-type{
+        background-image: url('../images/insta04.png');
+    }
+    #story ul li a{
+        text-decoration: none; text-indent: -9999px;
+        display: block;
+        height: 350px;
+        background-color: rgba(0, 0,0, 0.5);    
+    }
+    #story ul li a:hover{
+        background: none;
+    }
+    /* story section Fin */
+
+    #collection{
+        background-color: #e7e2d8;
+    }
+    #collection h2{
+        font-size: 50px; font-weight: 400; color: #031027;
+        padding-top: 240px; width: 32%; margin: 0 auto;
+        text-align: center;
+    }
+    #collection ul{
+        /* padding-top: 150px;  */
+        width: 73.68%; margin: 0 auto;
+    }
+    #collection ul li{
+        float: left;
+        width: 18.57%;
+    }
+    #collection ul li:first-of-type a{
+        background-image: url('../images/product_01.gif');
+    }
+    #collection ul li a{
+        text-indent: -9999px; display: block;
+        height: 260px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 100%;
+    }
+    #collection ul li div{
+        font-size: 16px; color: #031027; font-weight: 400;
+        line-height: 30px;
+    }
+    #collection ul li div h3{
+        padding-top: 340px; 
+        font-weight: 400;
+    }
+}

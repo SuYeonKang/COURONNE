@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+}
+header nav{
+    font-family: 'Open Sans';
+}
+
+@media screen and (min-width: 1280px){
+    header{
+        max-width: 1900px; width: 100%;
+    }
+    header h1{
+        padding: 40px 0 0 2.1%;
+        width: 19.47%; display: inline-block;
+    }
+    header h1 a{
+        display: inline-block;
+    }
+    header h1 a img{
+        width: 100%;
+    }
+    header nav{
+        display: inline-block;
+        margin-left: 35%; width: 40%;
+    }
+    header nav ul{
+        vertical-align: middle;
+        text-align: right;
+    }
+    header nav ul li{
+        display: inline-block;
+    }
+    header nav ul li:not(:first-of-type){
+        margin-left: 1.84%;
+    }
+    header nav ul li a{
+        text-decoration: none;
+        font-size: 25px; color: #aaaebd;
+    }
+    /* header Fin */
+}
