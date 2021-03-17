@@ -16,6 +16,7 @@ footer{
 @media screen and (min-width: 1280px){
     header{
         max-width: 1900px; width: 100%;
+        z-index: 100;
     }
     header h1{
         padding: 40px 0 0 2.1%;
@@ -45,11 +46,48 @@ footer{
         text-decoration: none;
         font-size: 25px; color: #aaaebd;
     }
+    header nav ul li a.active{
+        font-weight: 700; border-bottom: 2px solid #aaaebd;
+    }
     /* header Fin */
 
+    /* section.panel3{
+        height:1400px;
+    } */
+    section ul.pagination{
+        position:fixed; top: 40%; right: 3%; width: 3%;
+        z-index:1000;
+    }
+    section ul.pagination:after{
+        content:''; display:block; visibility:hidden; clear:both;
+    }
+    section ul.pagination li{
+        display:block; vertical-align: middle;
+    }
+    section ul.pagination li a{
+        text-decoration:none; display:inherit;
+        text-indent: -9999px; border: 1px solid #c0c4ce;
+        border-radius: 15px; background-color: #c0c4ce;
+        width: 5px; height: 5px; margin: 0 auto 20px;
+    }
+    section ul.pagination li a span{
+        /* display:inherit; text-align:center; color:transparent; 
+        background-color:transparent; border-right:2px solid black;  */
+        transition-duration: 1s; width:0%; overflow:hidden;
+    }
+    section ul.pagination li a.active{
+        width: 10px; height: 10px; background-color: transparent;
+    }
+    section ul.pagination li a.active span{
+        /* background-color:black; color:white; width:100%; */
+    }
+
+    /* scrollify */
+
     footer{
-        height: 60px; background-color: #031027;
+        height: 60px !important; background-color: #031027;
         color: #fff; text-align: center;
         font-size: 16px; padding-top: 50px;
     }
+    /* footer Fin */
 }
