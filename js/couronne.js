@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     // activeNav();
     scrollify();
+    mui();
 });
 
 
@@ -37,5 +38,11 @@ function scrollify() {
 
             $(".main").append(pagination);
         }
+    });
+}
+
+function mui(){
+    $(".mui").click(function(){
+        $(".muiContainer").toggleClass("active");
     });
 }
