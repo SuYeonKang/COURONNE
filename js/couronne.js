@@ -1,16 +1,19 @@
 $(document).ready(function(){
 
-    // activeNav();
+    activeNav();
     scrollify();
     mui();
 });
 
 
-// function activeNav(){
-//     $("header nav ul li a").click(function(){
-//         $(this).addClass("active");
-//     });
-// }
+function activeNav(){
+    $("header nav ul li a").click(function(){
+        var navMenu = $("header nav ul li a");
+        
+        $(navMenu).removeClass("active");
+        $(this).addClass("active");
+    });
+}
 
 function scrollify() {
     $.scrollify({
