@@ -9,6 +9,9 @@ header{
 header nav{
     font-family: 'Open Sans';
 }
+header nav ul li:first-of-type{
+    display: none;
+}
 footer{
     font-family: 'Nanum Gothic';
 }
