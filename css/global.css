@@ -76,6 +76,10 @@ footer{
     }
     /* scrollify */
 
+    .fade{
+        opacity: 0;
+    }
+
     footer{
         height: 40px !important; background-color: #031027;
         color: #fff; text-align: center;
@@ -146,6 +150,10 @@ footer{
         width: 10px; height: 10px; background-color: transparent;
     }
     /* scrollify */
+
+    .fade{
+        opacity: 0;
+    }
 
     footer{
         height: 60px !important; background-color: #031027;
@@ -231,6 +239,10 @@ footer{
     }
 
     /* scrollify */
+
+    .fade{
+        opacity: 0;
+    }
 
     footer{
         height: 60px !important; background-color: #031027;

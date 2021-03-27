@@ -3,6 +3,7 @@ $(document).ready(function(){
     activeNav();
     scrollActive();
     scrollify();
+    fadeIn();
     mui();
 });
 
@@ -38,21 +39,6 @@ function scrollActive(){
     });
 }
 
-// function scroll(){
-//     var $menu = $('#top_menu ul li'),
-//         $contents = $('#contents > div');
-
-//     $(window).scroll(function(){
-//         $contents.each(function(){
-//             if($(this).offset().top <= $(window).scrollTop()){
-//                 var idx = $(this).index();
-//                 $menu.removeClass('on');
-//                 $menu.eq(idx).addClass('on');
-//             }
-//         });
-//     });
-// }
-
 
 function scrollify() {
     $.scrollify({
@@ -80,6 +66,19 @@ function scrollify() {
 
             $(".main").append(pagination);
         }
+    });
+}
+
+function fadeIn(){
+    $(window).scroll(function(){
+        $(".fade").each(function(){
+            var object = $(this).offset().top + $(this).outerHeight();
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if(windowBottom > object/2){
+                $(this).animate({"opacity":"1"},1000);
+            }
+        });
     });
 }
 
