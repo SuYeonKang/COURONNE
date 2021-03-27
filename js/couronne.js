@@ -1,19 +1,58 @@
 $(document).ready(function(){
 
     activeNav();
+    scrollActive();
     scrollify();
     mui();
 });
 
 
 function activeNav(){
-    $("header nav ul li a").click(function(){
-        var navMenu = $("header nav ul li a");
-        
+    var navMenu = $("header nav ul li");
+
+    $(navMenu).click(function(){
+
         $(navMenu).removeClass("active");
         $(this).addClass("active");
     });
 }
+
+function scrollActive(){
+    var $menu = $("header nav ul li"),
+        $contents = $(".wrap > section");
+
+    $(window).scroll(function(){
+        // var position = $(this).scrollTop(); 
+
+        $contents.each(function(){
+            // var sectionHeight = $(this).offset().top;
+
+            if($(this).offset().top <= $(window).scrollTop()){
+                // var idx = $(this).attr("id");
+                var idx = $(this).index();
+
+                $menu.removeClass("active");
+                $menu.eq(idx).addClass("active");
+            }
+        });
+    });
+}
+
+// function scroll(){
+//     var $menu = $('#top_menu ul li'),
+//         $contents = $('#contents > div');
+
+//     $(window).scroll(function(){
+//         $contents.each(function(){
+//             if($(this).offset().top <= $(window).scrollTop()){
+//                 var idx = $(this).index();
+//                 $menu.removeClass('on');
+//                 $menu.eq(idx).addClass('on');
+//             }
+//         });
+//     });
+// }
+
 
 function scrollify() {
     $.scrollify({
